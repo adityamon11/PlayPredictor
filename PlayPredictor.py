@@ -10,7 +10,7 @@ def KNNClass(classifier,colLabels,colTargets):
 	data = colLabels;
 	target = colTargets;
 
-	data_train,data_test,target_train,target_test = train_test_split(data,target,test_size=0.75);
+	data_train,data_test,target_train,target_test = train_test_split(data,target,test_size=0.25);
 
 	classifier.fit(data_train,np.ravel(target_train,order='C'));
 	predictions = classifier.predict(data_test);
